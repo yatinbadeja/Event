@@ -1,0 +1,51 @@
+* {
+    /* box-sizing: border-box; */
+    font-family: 'Times New Roman', Times, serif
+  }
+  
+  .imageContainer{
+    background-color: #051027;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  
+  .bodyForm{
+    
+      height: 100%;
+      width: 100%;
+  
+  }
+  
+  .formContainer{
+    background-color: rgb(255, 255, 255);
+      padding: 15px;
+      margin-top: 20px; 
+      height: 100vh; 
+  }
+  form{
+    width: 70%;
+    border: 1px solid #dfdfdf;
+    padding: 40px;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+  }
+  
+  
+  button {
+    /* background: #05b462 !important; */
+    background: #1434A4;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    color:white;
+    margin-top: 10px;
+  }
+.form-group {
+  margin-bottom: 4vh;
+  }

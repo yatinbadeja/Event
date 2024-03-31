@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from '../Assets/c3-noBG.png'
 import './Form.css'
 import axios from 'axios'
+import {toast} from 'react-hot-toast'
 const Registration = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,6 +25,7 @@ const Registration = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     try{
       const config = {
         headers:{
@@ -32,11 +34,18 @@ const Registration = () => {
         }
       }
       console.log("In Handler")
-      await axios.post('http://localhost:4000/app/v1/create',formData,config);
+      await axios.post('http://localhost:4000/app/v1/create',formData,config)
       console.log("Data set successfully")
+      toast.success(`Thank you!!! ${formData.name} for registering for event...`)
     }
     catch(error){
       console.log(error.message)
+      if(error.response.status === 403){
+        toast.error(`User details already registered us`)
+      }
+      else{
+        toast.error("Network Error")
+      }
     }
   };
   return (

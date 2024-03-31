@@ -3,7 +3,6 @@ import logo from '../Assets/c3-noBG.png'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import {Link} from 'react-router-dom'
-import Registration from '../Pages/Form';
 export default function Header() {
     return (
         <div className='header' style={{ "height": "100vh", "width": "100vw" }}>
